@@ -30,5 +30,10 @@ namespace WPFRPG
 
             DataContext = gameSession;
         }
+
+        public void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            gameSession.CurrentPlayer.Experience += 10;
+        }
     }
 }
