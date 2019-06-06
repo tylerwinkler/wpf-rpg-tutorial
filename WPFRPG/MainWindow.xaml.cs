@@ -20,9 +20,15 @@ namespace WPFRPG
     /// </summary>
     public partial class MainWindow : Window
     {
+        private GameSession gameSession;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            gameSession = new GameSession();
+
+            DataContext = gameSession;
         }
     }
 }

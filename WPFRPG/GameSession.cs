@@ -8,7 +8,7 @@ namespace WPFRPG
 {
     class GameSession
     {
-        Player CurrentPlayer { get; set; }
+        public Player CurrentPlayer { get; set; }
 
         public GameSession()
         {
@@ -16,6 +16,10 @@ namespace WPFRPG
 
             CurrentPlayer.Name = "Tyler";
             CurrentPlayer.Gold = 2000;
+            CurrentPlayer.Health = 10;
+            CurrentPlayer.CharacterClass = "Fighter";
+            CurrentPlayer.Level = 1;
+            CurrentPlayer.Experience = 0;
         }
     }
 }
