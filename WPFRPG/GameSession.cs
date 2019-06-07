@@ -9,17 +9,29 @@ namespace WPFRPG
     class GameSession
     {
         public Player CurrentPlayer { get; set; }
+        public Location CurrentLocation { get; set; }
 
         public GameSession()
         {
-            CurrentPlayer = new Player();
+            CurrentPlayer = new Player
+            {
 
-            CurrentPlayer.Name = "Tyler";
-            CurrentPlayer.Gold = 2000;
-            CurrentPlayer.Health = 10;
-            CurrentPlayer.CharacterClass = "Fighter";
-            CurrentPlayer.Level = 1;
-            CurrentPlayer.Experience = 0;
+                Name = "Tyler",
+                Gold = 2000,
+                Health = 10,
+                CharacterClass = "Fighter",
+                Level = 1,
+                Experience = 0
+            };
+
+            CurrentLocation = new Location
+            {
+                Name = "Home",
+                XCoordinate = 0,
+                YCoordinate = 0,
+                Description = "This is your house",
+                ImageName = "/Engine;component/Images/Locations/Home.png"
+            };
         }
     }
 }
